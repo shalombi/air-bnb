@@ -46,17 +46,25 @@
       </div>
 
       <section class="actions grid">
-        <button>btn1</button>
-        <button>btn2</button>
 
-        <div class="flex">
-          <img src="" alt="">
-          <button class="burger-nav">
-            <img src="" alt="">
-            btn3
+        <button class="pill left-action-btn"> <span class="">Airbnb your home</span> </button>
+
+        <button class="pill flex align-center justify-center">
+          <img class="lang-img" src="../assets/imgs/svgs/lang.svg" alt="">
+        </button>
+
+        <div class="flex right-action-div pill border">
+
+          <button class="burger-nav pill flex align-center">
+            <img class="burger-nav-img" src="../assets/imgs/svgs/nav.svg" alt="">
+          </button>
+
+          <button class="user-btn pill flex align-center justify-center">
+            <img class="user pill" src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3">
           </button>
 
         </div>
+
       </section>
 
     </section>
@@ -78,10 +86,16 @@
 </template>
 <script>
 export default {
+  data() {
+    return {
+      // langUrl: "../assets/imgs/svgs/lang.svg"
+    }
+  },
+
   computed: {
     loggedInUser() {
       return this.$store.getters.loggedinUser
-    },
+    }
   }
 }
 </script>
