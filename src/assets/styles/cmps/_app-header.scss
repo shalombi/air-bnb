@@ -1,8 +1,15 @@
 header {
     background-color: $clr4;
-    padding: 10px;
+    // padding: 10px;
     display: flex;
     justify-content: space-between;
+
+    width: 100%;
+    background-color: #fff;
+    padding: 4px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+
 
     .head-page {
         display: flex;
@@ -44,33 +51,45 @@ header {
         // padding: 10px;
         // color: black;
         align-items: center;
-        border: 1px solid black;
+        border: 1px solid $clr5;
         border-radius: 120px;
         justify-content: space-between;
         grid-template-columns: 0.45fr 0.01fr 0.45fr 0.01fr 0.65fr;
         justify-items: center;
 
-        width: rem(353px);
-
-        height: rem(48px);
+        width: rem(355px);
+        height: rem(49px);
 
         .icon-search {
             max-width: 12px;
         }
 
         button {
-            height: rem(35px);
+            // height: rem(35px);
             color: black;
+            font-size: rem(15px);
+        }
+
+        .btn-navigation-left {
+            // border-top-left-radius: 25px;
+            // border-bottom-left-radius: 25px;
+            // padding-left: 8px;
+            /* padding: 52px; */
+            margin-inline-start: rem(6px);
+            background-color: $clr6 ;
 
         }
 
-        .btn-left {
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
-            padding-left: 8px;
+        .btn-navigation-mid {
+            background-color: $clr6 ;
         }
 
-        // // btn-mid {}
+        .btn-navigation-right {
+            background-color: $clr6 ;
+            color: $clr8;
+            font-size: rem(14px);
+        }
+
 
         .div-right-navigation {
             align-items: center;
@@ -79,11 +98,18 @@ header {
         }
 
 
+
     }
 
     .actions {
         width: 20%;
         grid-template-columns: 1fr 0.35fr 0.65fr;
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+
         // grid-template-columns: 1fr 1fr 1fr;
 
         // left-action-btn{
