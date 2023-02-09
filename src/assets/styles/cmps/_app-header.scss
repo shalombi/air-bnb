@@ -23,6 +23,8 @@ header {
         position: relative;
         width: 100%;
         z-index: 1;
+        margin-left: 18px;
+        margin-right: 18px;
     }
 
     div .search-container-icon {
@@ -107,17 +109,19 @@ header {
 
     .actions {
         // width: 20%;
-        grid-template-columns: 1.3fr 0.5fr 1fr;
+        grid-template-columns: 1.0fr 0.52fr 0.5fr;
 
         button {
             color: black;
-            padding: 5px 10px;
-            margin: 5px;
+            padding: 2.5px 5px;
+            // margin: 5px;
+
             // background-color: $clr6 ;
         }
 
         .burger-nav-img {
-            width: rem(18px)
+            width: rem(18px);
+            margin: 12px 10px 10px 12px;
         }
 
         .lang-img {
