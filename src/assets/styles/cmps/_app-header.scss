@@ -1,0 +1,111 @@
+header {
+    background-color: $clr4;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .head-page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    div .search-container-icon {
+        background-color: $clr2;
+        margin-right: 14px;
+
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-container {
+        padding: 6px 12px;
+        border-radius: 999px;
+        border: 1px solid currentColor;
+    }
+
+    .search-logo {
+        width: 12px;
+        height: 12px;
+        position: relative;
+    }
+
+    .navigation {
+        // padding: 10px;
+        // color: black;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 120px;
+        justify-content: space-between;
+        grid-template-columns: 0.45fr 0.01fr 0.45fr 0.01fr 0.65fr;
+        justify-items: center;
+
+        width: rem(353px);
+
+        height: rem(48px);
+
+        .icon-search {
+            max-width: 12px;
+        }
+
+        button {
+            height: rem(35px);
+            color: black;
+
+        }
+
+        .btn-left {
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            padding-left: 8px;
+        }
+
+        // // btn-mid {}
+
+        .div-right-navigation {
+            align-items: center;
+            // border-top-right-radius: 25px;
+            // border-bottom-right-radius: 25px;
+        }
+
+
+    }
+
+    .actions {
+        width: 20%;
+        grid-template-columns: 1fr 0.35fr 0.65fr;
+        // grid-template-columns: 1fr 1fr 1fr;
+
+        // left-action-btn{
+
+        // }
+
+        // mid-action-btn{
+
+        // }
+
+        // right-action-btn{
+
+        // }
+
+    }
+
+
+
+}
+
+
+
+
+
+//todo: replace it - i remove css of starter,there is this css oin day 53
