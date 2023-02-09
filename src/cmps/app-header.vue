@@ -47,9 +47,9 @@
 
       <section class="actions grid">
 
-        <button class="pill left-action-btn"> <span class="">Airbnb your home</span> </button>
+        <button class="pill left-action-btn hover-pill"> <span class="">Airbnb your home</span> </button>
 
-        <button class="pill flex align-center justify-center">
+        <button class="container-lang-img pill flex align-center justify-center">
           <img class="lang-img" src="../assets/imgs/svgs/lang.svg" alt="">
         </button>
 
