@@ -11,68 +11,69 @@
       <img :src="loggedInUser.imgUrl" />
     </section>
 
+    <section>
+      <section class="head-page">
 
-    <section class="head-page flex">
+        <div class="logo pointer">
+          <img src="../assets/logo.svg" alt="">
+        </div>
 
-      <div class="logo pointer">
-        <img src="../assets/logo.svg" alt="">
-      </div>
+        <div class="navigation grid">
 
-      <div class="navigation grid">
-
-        <button class="btn-navigation-left">
-          <span>Anywhere</span>
-        </button>
-
-        <span>|</span>
-
-        <button class="btn-navigation-mid">
-          <span>Any week</span>
-        </button>
-
-        <span>|</span>
-
-
-        <div class="flex div-right-navigation justify-content">
-          <button class="btn-navigation-right">
-            <span>Add guests</span>
+          <button class="btn-navigation-left">
+            <span>Anywhere</span>
           </button>
 
-          <div class="search-container-icon">
-            <img class="icon-search" src="../assets/imgs/svgs/icon-search.svg" alt="">
+          <span>|</span>
+
+          <button class="btn-navigation-mid">
+            <span>Any week</span>
+          </button>
+
+          <span>|</span>
+
+
+          <div class="flex div-right-navigation justify-content">
+            <button class="btn-navigation-right">
+              <span>Add guests</span>
+            </button>
+
+            <div class="search-container-icon">
+              <img class="icon-search" src="../assets/imgs/svgs/icon-search.svg" alt="">
+            </div>
           </div>
+
         </div>
 
-      </div>
+        <section class="actions grid">
 
-      <section class="actions grid">
+          <button class="pill left-action-btn hover-pill"> <span class="">Airbnb your home</span> </button>
 
-        <button class="pill left-action-btn hover-pill"> <span class="">Airbnb your home</span> </button>
-
-        <button class="container--lang-img pill flex align-center justify-center">
-          <img class="lang-img" src="../assets/imgs/svgs/lang.svg" alt="">
-        </button>
-
-        <div class="flex right-action-div pill border">
-
-          <!-- <button class="burger-nav pill flex align-center"> -->
-          <img class="burger-nav-img pill" src="../assets/imgs/svgs/nav.svg" alt="">
-          <!-- </button> -->
-
-          <button class="user-btn pill flex align-center justify-center">
-            <img class="user pill" src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3">
+          <button class="container--lang-img pill flex align-center justify-center">
+            <img class="lang-img" src="../assets/imgs/svgs/lang.svg" alt="">
           </button>
 
-        </div>
+          <div class="flex right-action-div pill border">
 
+            <!-- <button class="burger-nav pill flex align-center"> -->
+            <img class="burger-nav-img pill" src="../assets/imgs/svgs/nav.svg" alt="">
+            <!-- </button> -->
+
+            <button class="user-btn pill flex align-center justify-center">
+              <img class="user pill" src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3">
+            </button>
+
+          </div>
+
+        </section>
       </section>
 
+      
+      
     </section>
+    <sort-by />
 
-
-    
   </header>
-
 
 
   <nav>
@@ -87,9 +88,13 @@
 
 </template>
 <script>
+name: "app-header"
+import sortBy from './sort-by.cmp.vue'
+
 export default {
   data() {
     return {
+      // imgsUrls:[]
       // langUrl: "../assets/imgs/svgs/lang.svg"
     }
   },
@@ -98,6 +103,10 @@ export default {
     loggedInUser() {
       return this.$store.getters.loggedinUser
     }
+  },
+  components: {
+    sortBy,
   }
+
 }
 </script>
