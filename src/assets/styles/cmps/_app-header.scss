@@ -12,11 +12,11 @@ header {
     width: 100%;
     background-color: #fff;
     padding: 4px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #ddd;
+    
+    // todo:for cool effect -  when go down...
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // border-bottom: 1px solid #ddd;
 
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
 
     .head-container {
         border-bottom: 1px solid $clr9;
@@ -197,7 +197,8 @@ header {
 
 
 .sort {
-    margin-bottom: 36px;
+    margin-bottom: 18px;
+    margin-top: 18px;
     font-family: sans-serif;
     // border-top: 1px solid $clr9;
 

@@ -1,25 +1,82 @@
 .house-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    // list-style: none;
+    // display: flex;
+    display: grid;
+    // grid-template-columns: minmax(200px, 1fr);
 
-    li {
-        background-color: $clr3;
-        color: $clr6;
-        padding: 5px;
-        margin: 5px;
-    }
+    // grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+    gap: 12px;
 
-    a {
-        color: $clr1;
-        padding: 10px;
-    }
+    // margin-left: 80px;
+    // margin-right: 80px;
+    // flex-wrap: wrap;
 
-    pre {
-        background-color: #ddd;
-        font-size: .5em;
-        color: #333;
-        padding: .2em;
-        margin: .2em;
-    }
 }
+
+.house {
+    // background-color: rgb(228, 228, 228);
+}
+
+.prev-desc {
+    margin-top: 16px;
+    margin-left: 24px;
+    color: $clr10;
+    font-size: 14px;
+
+    .location-prev {
+        color: $clr10;
+    }
+
+    .distance-prev {
+        color: $clr11;
+    }
+
+    .date-prev {
+        color: $clr11;
+    }
+
+    .price-prev {
+        .sum {
+            color: $clr10;
+        }
+
+        .per-night-txt {
+            color: $clr10;
+        }
+    }
+
+}
+
+.house-list-container {
+    display: grid;
+    grid-template-columns: 0.5fr 9fr 0.5fr;
+}
+
+
+// <span class="sum">₪1,397</span> <span class="per-night-txt">night</span>
+
+
+
+
+
+// <div class="prev-desc flex column">
+
+
+// <span class="location-prev">
+//   Harlingen, Netherlands
+// </span>
+
+// <span class="distance-prev">
+//   3,318 kilometers away
+//   <!-- ${{ house.price?.toLocaleString() }} -->
+// </span>
+
+// <span class="date-prev">
+//   Mar 19 - 24
+// </span>
+
+// <span class="price-prev">
+//   ₪1,397 per night
+// </span>
+// </div>

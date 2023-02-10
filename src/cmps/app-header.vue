@@ -70,26 +70,16 @@
 
     </section>
     <sort-by />
-    <awesome-cards />
+    <!-- <awesome-cards /> -->
 
   </header>
 
-
-  <nav>
-    <router-link to="/">
-      <span role="img" aria-label="logo">🙏</span>
-    </router-link>
-    <router-link to="/house">Cars</router-link>
-    <router-link to="/review">Reviews</router-link>
-    <router-link to="/chat">Chat</router-link>
-    <router-link to="/login">Login / Signup</router-link>
-  </nav>
 
 </template>
 <script>
 name: "app-header"
 import sortBy from './sort-by.cmp.vue'
-import awesomeCards from './awesome-cards.vue'
+// import awesomeCards from './awesome-cards.vue'
 
 
 export default {
@@ -107,7 +97,7 @@ export default {
   },
   components: {
     sortBy,
-    awesomeCards,
+    // awesomeCards,
   }
 
 }
