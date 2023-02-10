@@ -68,10 +68,11 @@
         </section>
       </section>
 
-      
-      
+
+
     </section>
     <sort-by />
+    <awesome-cards />
 
   </header>
 
@@ -90,6 +91,8 @@
 <script>
 name: "app-header"
 import sortBy from './sort-by.cmp.vue'
+import awesomeCards from './awesome-cards.vue'
+
 
 export default {
   data() {
@@ -106,6 +109,7 @@ export default {
   },
   components: {
     sortBy,
+    awesomeCards,
   }
 
 }

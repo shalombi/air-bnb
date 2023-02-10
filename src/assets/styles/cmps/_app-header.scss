@@ -221,3 +221,30 @@ header {
 
 
 //todo: replace it - i remove css of starter,there is this css oin day 53
+
+
+.con {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+
+    height: 100px;
+    overflow-x: scroll;
+}
+
+.scroll-btn-left,
+.scroll-btn-right {
+    background-color: black;
+    margin: 20px;
+    // overflow: visible;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+
+.scroll-btn-right {
+    right: 0;
+}

@@ -29,6 +29,7 @@
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { houseService } from '../services/house.service.local'
 import { getActionRemoveHouse, getActionUpdateHouse, getActionAddHouseMsg } from '../store/house.store'
+
 export default {
   data() {
     return {

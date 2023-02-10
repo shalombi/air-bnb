@@ -1,7 +1,9 @@
 <template>
 
-  <section class="sort flex">
-  
+  <!-- <button class="scroll-btn-left" @click="scrollLeft">Left</button> -->
+  <section class="sort flex con">
+
+
     <div class="el-sorting first">
       <img src="../assets/imgs/main-bar-imgs/Amazing pools.jpeg" alt="">
       <span class="el-label-sorting">Amazing pools</span>
@@ -85,7 +87,50 @@
 
 
 
+
+    <!-- todo: add more img ,these img repear -->
+
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Boats.jpeg" alt="">
+      <span class="el-label-sorting">Boats</span>
+    </div>
+
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Amazing views.jpeg" alt="">
+      <span class="el-label-sorting">Amazing views</span>
+    </div>
+
+
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Ski-in:out.jpeg" alt="">
+      <span class="el-label-sorting">Ski-in:out</span>
+    </div>
+
+    <!--
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Boats.jpeg" alt="">
+      <span class="el-label-sorting">Boats</span>
+    </div>
+
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Amazing views.jpeg" alt="">
+      <span class="el-label-sorting">Amazing views</span>
+    </div>
+
+
+    <div class="el-sorting">
+      <img src="../assets/imgs/main-bar-imgs/Ski-in:out.jpeg" alt="">
+      <span class="el-label-sorting">Ski-in:out</span>
+    </div> -->
+
+
+    <!-- <button class="scroll-btn-right" @click="scrollRight">Right</button> -->
+    <button class="el-sorting filter">
+      <img src="../assets/imgs/svgs/filter.svg" alt="">
+      <span class="el-label-sorting">filter</span>
+    </button>
   </section>
+
 </template>
 
 <script>
@@ -113,6 +158,14 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    scrollLeft() {
+      this.$el.scrollLeft -= 200;
+    },
+    scrollRight() {
+      this.$el.scrollLeft += 200;
+    },
   },
   computed: {
     sortedProperties() {
