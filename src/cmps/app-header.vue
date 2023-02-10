@@ -1,17 +1,15 @@
 <template>
 
-
   <header>
-
-    <section class="loggedin-user" v-if="loggedInUser">
+    <!-- <section class="loggedin-user" v-if="loggedInUser">
       <router-link :to="`/user/${loggedInUser._id}`">
         {{ loggedInUser.fullname }}
       </router-link>
       <span>{{ loggedInUser.score.toLocaleString() }}</span>
       <img :src="loggedInUser.imgUrl" />
-    </section>
+    </section> -->
 
-    <section>
+    <section class="head-container">
       <section class="head-page">
 
         <div class="logo pointer">

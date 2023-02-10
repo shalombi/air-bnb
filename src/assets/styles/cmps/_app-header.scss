@@ -1,4 +1,9 @@
+// .loggedin-user {
+//     border-bottom: 1px solid #dad5d5;
+// }
+
 header {
+
     background-color: $clr4;
     // padding: 10px;
     // display: flex;
@@ -12,6 +17,11 @@ header {
 
     // display: grid;
     // grid-template-columns: 1fr 1fr 1fr;
+
+    .head-container {
+        border-bottom: 1px solid $clr9;
+    }
+
     .border-bottom {
         border-bottom: 1px black solid;
     }
@@ -187,11 +197,14 @@ header {
 
 
 .sort {
+    margin-bottom: 36px;
     font-family: sans-serif;
-    border-top: 1px solid $clr9;
+    // border-top: 1px solid $clr9;
 
-    // margin-left: 18px;
-    // margin-right: 18px;
+
+    margin-left: 80px;
+    margin-right: 80px;
+
     gap: 18px;
     font-size: 16px;
     color: $clr7;
@@ -214,13 +227,6 @@ header {
     }
 
 }
-
-
-
-
-
-
-//todo: replace it - i remove css of starter,there is this css oin day 53
 
 
 .con {

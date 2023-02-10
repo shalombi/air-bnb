@@ -61,11 +61,15 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 24px;
 
+
+  margin-left: 80px;
+  margin-right: 80px;
+
 }
 
-.element-col {
-  /* margin: 9px; */
-}
+/* .element-col { */
+/* margin: 9px; */
+/* } */
 </style>
 
 <script>
