@@ -6,6 +6,7 @@ import houseApp from './views/house-app.vue'
 import reviewApp from './views/review-app.vue'
 import loginSignup from './views/login-signup.vue'
 import userDetails from './views/user-details.vue'
+import houseDetails from './views/house-details.vue'
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/house',
     name: 'house-app',
     component: houseApp
+  },
+  {
+    path: '/house/:id',
+    name: 'details',
+    component: houseDetails
   },
   {
     path: '/review',

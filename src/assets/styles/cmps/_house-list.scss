@@ -16,13 +16,23 @@
 
 .house {
     // background-color: rgb(228, 228, 228);
+    align-items: flex-start;
 }
 
+// .house-list {
+//     justify-items: center;
+// }
+
+.house-list {
+    justify-items: center;
+}
+
+
 .prev-desc {
-    margin-top: 16px;
-    margin-left: 24px;
-    color: $clr10;
-    font-size: 14px;
+    margin-top: 10px;
+    // margin-left: 24px;
+    // color: $clr10;
+    // font-size: 14px;
 
     .location-prev {
         color: $clr10;

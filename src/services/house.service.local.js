@@ -74,6 +74,19 @@ function getEmptyHouse() {
 
 // TEST DATA
 // ; (async () => {
-//     await storageService.post(STORAGE_KEY, { type: 'Amazing house 1', price: 180 })
-//     await storageService.post(STORAGE_KEY, { type: 'Amazing house 2', price: 240 })
+//     await storageService.post(STORAGE_KEY, { type: 'Seaview studio in Coral Bay by the Sea', price: 180, kmDistance: 3318, dateFree: ' Mar 19 - 24' })
+//     await storageService.post(STORAGE_KEY, { type: 'Socrates stone house, Triantaros', price: 240, kmDistance: 3318, dateFree: 'Mar 19 - 24' })
 // })()
+
+
+
+// <span class="distance-prev">
+// <!-- 3,318 kilometers away -->
+// {{ house.kmDistance }} kilometers away
+// <!-- ${{ house.price?.toLocaleString() }} -->
+// </span>
+
+// <span class="date-prev">
+// Mar 19 - 24
+// {{ house.dateFree }}
+// </span>

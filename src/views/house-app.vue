@@ -1,83 +1,58 @@
-<template>
-
-
-  <!-- <div class="container home"> -->
+<template><!-- <div class="container home"> -->
 
   <section class="grid house-list-container">
     <section></section>
 
     <section class="house-list">
+      
+      
       <div class="house flex column" v-for="house in houses" :key="house._id">
+        <router-link class="router-link-cls" :to="'/house/' + house._id">
+        <house-preview  :house="house"/>
+        </router-link> 
 
-        <div class="flex center">
-          <img
-            src="https://a0.muscache.com/im/pictures/prohost-api/Hosting-656456202599059844/original/4dd9802c-0f7b-4eae-b535-e28c7904f332.jpeg?im_w=1200"
-            class="image_">
-        </div>
-
-        <!-- https://a0.muscache.com/im/pictures/miso/Hosting-6…53bfa1e-8c53-4dc0-a3af-0a75728c0708.jpeg?im_w=720 -->
-
-        <!-- <div class="grid"> -->
-
-        <div class="prev-desc flex column">
-
-
-          <span class="location-prev">
-            Harlingen, Netherlands
-          </span>
-
-          <span class="distance-prev">
-            3,318 kilometers away
-            <!-- ${{ house.price?.toLocaleString() }} -->
-          </span>
-
-          <span class="date-prev">
-            Mar 19 - 24
-          </span>
-
-          <span class="price-prev">
-            <span class="sum">₪1,397</span> <span class="per-night-txt">night</span>
-          </span>
-        </div>
-        <!-- </div> -->
-
-        <!-- <button @click="removeHouse(house._id)">x</button>
-      <button @click="updateHouse(house)">Update</button>
-      <hr />
-      <button @click="addHouseMsg(house._id)">Add house msg</button>
-      <button @click="printHouseToConsole(house)">Print msgs to console</button> -->
-
+        <!-- todo : make this btns useful -->
+         <!-- <button @click="removeHouse(house._id)">x</button>
+          <button @click="updateHouse(house)">Update</button>
+          <hr />
+          <button @click="addHouseMsg(house._id)">Add house msg</button>
+          <button @click="printHouseToConsole(house)">Print msgs to console</button>  -->
       </div>
     </section>
+
+
   </section>
 
-  <!-- <hr />
+  <hr />
 
-    <form @submit.prevent="addHouse()">
-      <h2>Add house</h2>
-      <input type="text" v-model="houseToAdd.vendor" />
-      <button>Save</button>
-    </form>
-  </div>
+        <form @submit.prevent="addHouse()">
+          <h2>Add house</h2>
+          <input type="text" v-model="houseToAdd.vendor" />
+          <button>Save</button>
+        </form>
+      <!-- </div> -->
 
-  <nav>
-    <router-link to="/">
-      <span role="img" aria-label="logo">🙏</span>
-    </router-link>
-    <router-link to="/house">Cars</router-link>
-    <router-link to="/review">Reviews</router-link>
-    <router-link to="/chat">Chat</router-link>
-    <router-link to="/login">Login / Signup</router-link>
-  </nav> -->
+      <nav>
+        <router-link to="/">
+          <span role="img" aria-label="logo">🙏</span>
+        </router-link>
+        <router-link to="/house">Cars</router-link>
+        <router-link to="/review">Reviews</router-link>
+        <router-link to="/chat">Chat</router-link>
+        <router-link to="/login">Login / Signup</router-link>
+      </nav>
 
-  <section></section>
-
+<section></section>
 </template>
 
 <script>
+
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { houseService } from '../services/house.service.local'
 import { getActionRemoveHouse, getActionUpdateHouse, getActionAddHouseMsg } from '../store/house.store'
+
+import housePreview from '../cmps/house-preview.vue'
+
 export default {
   data() {
     return {
@@ -140,6 +115,9 @@ export default {
     printHouseToConsole(house) {
       console.log('House msgs:', house.msgs)
     }
+  },
+   components: {
+    housePreview
   }
 
 

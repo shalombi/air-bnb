@@ -17,6 +17,19 @@ body {
     font-size: rem(18px);
     margin: 0;
 
+    @include for-mobile-layout {
+        // background-color: green;
+    }
+
+    @include for-normal-layout {
+        // background-color: rgb(57, 83, 4);
+    }
+
+    @include for-wide-layout {
+        // background-color:lightgreen;
+    }
+
+
 }
 
 p,
@@ -28,11 +41,13 @@ h4,
 h5,
 h6 {
     font-family: sans-serif;
-    ;
     margin: 0 0 0.6em;
     line-height: 1;
 }
 
+span {
+    margin: 0 0 0.3em;
+}
 
 section,
 main,
@@ -59,4 +74,8 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.router-link-cls:hover {
+    text-decoration: unset;
 }

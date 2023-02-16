@@ -1,5 +1,8 @@
 /* Breakpoint mixins */
 
+// $mobile-breakpoint: 460px;
+// $narrow-breakpoint: 720px;
+// $normal-breakpoint: 960px;
 @mixin for-mobile-layout {
     @media (max-width: calc($mobile-breakpoint + 40px)) {
         @content;
@@ -56,3 +59,7 @@
         }
     }
   }
+
+  // .house-list {
+//     justify-items: center;
+// }

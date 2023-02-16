@@ -12,7 +12,7 @@ header {
     width: 100%;
     background-color: #fff;
     padding: 4px 0;
-    
+
     // todo:for cool effect -  when go down...
     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     // border-bottom: 1px solid #ddd;
@@ -217,10 +217,18 @@ header {
     }
 
     .el-sorting {
+        opacity: 0.5;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+    }
+
+    .el-sorting:hover {
+        opacity: 1;
+        transition: 0.4s;
+
     }
 
     .first {

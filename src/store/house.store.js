@@ -29,12 +29,18 @@ export function getActionAddHouseMsg(houseId) {
 
 export const houseStore = {
     state: {
+        displaySortBy: true,
         houses: []
     },
     getters: {
         houses({ houses }) { return houses },
+        displaySortBy({ displaySortBy }) { return displaySortBy },
+
     },
     mutations: {
+        displaySortBy(state,  payload ) {
+            state.displaySortBy = payload.displaySortBy
+        },
         setHouses(state, { houses }) {
             state.houses = houses
         },
