@@ -1,0 +1,42 @@
+.title {
+    margin-top: rem(24px);
+    color: $clr7;
+
+}
+
+.star,
+.row-up,
+.like {
+    max-width: rem(18px);
+}
+
+.star {
+    margin-bottom: rem(10px);
+}
+
+.location-txt {
+    min-width: rem(460px);
+}
+
+// $clr7
+
+.left-sub-title div {
+    gap: 12px;
+}
+
+.left-sub-title div div {
+    margin-right: 12px;
+}
+
+.left-sub-title div span,
+.rate {
+    margin: 0;
+    line-height: none;
+    color: $clr7;
+}
+
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
