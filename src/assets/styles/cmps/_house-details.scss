@@ -22,6 +22,7 @@
 
 .left-sub-title div {
     gap: 12px;
+
 }
 
 .left-sub-title div div {
@@ -33,10 +34,308 @@
     margin: 0;
     line-height: none;
     color: $clr7;
+    margin-top: 3px;
 }
 
 .container {
     margin-left: 20px;
     margin-right: 20px;
+}
+
+.right-sub-title {
+    gap: 32px;
+}
+
+.action-sub-title {
+    gap: 12px;
+    color: $clr7;
+}
+
+
+.grid-imgs {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+
+    .hero-grid-left {
+        width: 100%;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        // margin-left: rem(100px);
+    }
+
+    .left-side-grid {
+        margin-left: rem(100px);
+
+    }
+
+    .right-side-grid {
+        grid-template-columns: 1fr 1fr;
+        margin-right: rem(100px);
+
+        // border-top-right-radius:14px;
+        // border-bottom-right-radius:14px;
+
+        // gap: 12px;
+    }
+
+    .right-top {
+        border-top-right-radius: 14px;
+
+    }
+
+    .right-bottom {
+        border-bottom-right-radius: 14px;
+    }
+
+    .right-side-grid>* {
+        width: 97%;
+    }
 
 }
+
+.container-details {
+    margin-left: rem(100px);
+}
+
+.details {
+    color: $clr7;
+    margin-top: rem(30px);
+    // margin-left: rem(100px);
+    // margin-bottom: 12px;
+
+    .info {
+        margin-bottom: 12px;
+
+        .info-txt {
+            // font-weight: lighter;
+            font-size: 17px;
+            font-weight: 100;
+            color: $clr8;
+            // background-color: aqua;
+        }
+    }
+
+    .bottom-title {
+        flex-direction: column;
+    }
+
+    .bottom-title-span {
+        margin-bottom: rem(12px);
+        font-weight: bolder;
+    }
+
+    .desc-brief {
+        font-size: 16px;
+    }
+}
+
+.container-details {
+    grid-template-columns: 2fr 1fr;
+}
+
+.bottom-title {
+    // border-bottom: 1px solid $clr5;
+    // margin-bottom: 12px;
+    margin-bottom: rem(22px)
+}
+
+
+.services {
+
+    div {
+        align-items: flex-start;
+        margin-bottom: 12px;
+    }
+
+    div img {
+        max-width: 24px;
+        margin-right: 12px;
+        opacity: 0.5;
+    }
+
+    .brief-service {
+        color: $clr12;
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+
+
+}
+
+.reserve-box {
+    // border-radius: 12px;
+    // width: 33.33333333333333% !important;
+    // margin-top: 20%;
+    margin-top: 24%;
+    margin-left: 8.32%;
+    margin-right: 19%;
+
+
+    flex-direction: column;
+    padding: 24px;
+    color: $clr7;
+    border: 1px solid $clr11;
+    border-radius: 20px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
+
+    .date-reserve {
+        // border-radius: 12px;
+        // border: 1px solid rgb(113, 113, 113);
+        justify-content: space-between;
+    }
+
+    // .container-date-reserve{
+
+    // }
+    // .container {
+    // border: 1px solid rgb(113, 113, 113);
+    // }
+
+    .guests {
+        border-top: 1px solid rgb(113, 113, 113);
+        padding: 3px;
+
+        // margin-left: 16px;
+        // border-top: none;
+        // border-radius: 12px;
+        span {
+            margin-left: 16px
+        }
+
+    }
+
+
+
+    .container-date-reserve {
+        border: 1px solid rgb(113, 113, 113);
+        border-radius: 12px;
+        margin-top: 18px;
+
+
+        .check-in,
+        .check-out,
+        .guests-txt {
+            padding: 3px;
+            // margin: 4px;
+        }
+
+        // .guests-txt,
+        // .amount-guests-txt {
+        //     margin-bottom: 10px;
+        // }
+
+        .check-in {
+            margin-left: 16px;
+        }
+
+        .check-out {
+            margin-right: 16px;
+        }
+    }
+
+    div .price {
+        // background-color: aqua;
+        // margin-top: 12px;
+        font-weight: bold;
+
+        span {
+            font-weight: lighter;
+        }
+    }
+
+
+    // .price {
+    // }
+
+    // div {
+    //     // flex-direction: column
+    // }
+    .btn-reserve {
+        background: $clr2;
+        opacity: 0.9.3;
+        margin-top: 16px;
+        margin-bottom: 16px;
+
+        font-size: 18px;
+        padding: 12px;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .check-in-txt,
+    .check-out-txt,
+    .guests-txt {
+        font-size: 12px;
+        font-weight: bold;
+        // color: $clr5;
+    }
+
+    .date-txt,
+    .amount-guests-txt {
+        font-size: 16px;
+        color: $clr10;
+
+    }
+
+
+    div .right-content {
+        min-width: 120px;
+        position: relative;
+    }
+
+    // ;
+    .status {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+}
+
+.star-review-img {
+    max-width: 14px;
+    margin-right: 4px;
+    position: relative;
+    top: 1px;
+    // margin-left: 20px;
+    // background-color: aquamarine;
+}
+
+.star-review-txt,
+.reviews-amount {
+    font-size: 12px;
+    color: $clr8;
+    // margin-bottom: 12px;
+}
+
+// .reviews-amount{
+
+// }
+
+// .price {
+//     // background-color: aqua;
+//     padding: 22px;
+// }
+
+// Self check-in
+// <img class="left-top" src="../assets/imgs/img_house_example/0da3d0ef-a7b1-4363-ab9b-6adcadab0738.webp"
+// alt="">
+// <img class="right-top"
+// src="../assets/imgs/img_house_example/8bc72225-3220-4b5d-af7e-d4c62a7c94b5.webp" alt="">
+// <img class="left-bottom"
+// src="../assets/imgs/img_house_example/d7c9656c-339b-42fc-b830-8d32a3deb7dc.webp" alt="">
+// <img class="right-bottom" src="../assets/imgs/img_house_example/d3707a62-24bb-4a3f-a3d2-2e6812fa3194.webp"
+// alt="">
+
+
+
+
+
+//   <img class="grid-left" src="../assets/imgs/img_house_example/55d736c8-0a50-43f4-aefd-9d5ce6ae4870.webp" alt="">
+//   <img class="grid-right-top" src="../assets/imgs/img_house_example/0da3d0ef-a7b1-4363-ab9b-6adcadab0738.webp" alt="">
+//   <img class="grid-right-bottom" src="../assets/imgs/img_house_example/8bc72225-3220-4b5d-af7e-d4c62a7c94b5.webp" alt="">
+//   <img class="grid-left-bottom" src="../assets/imgs/img_house_example/d7c9656c-339b-42fc-b830-8d32a3deb7dc.webp" alt="">
+//   <img class="grid-left-top" src="../assets/imgs/img_house_example/d3707a62-24bb-4a3f-a3d2-2e6812fa3194.webp" alt="">
