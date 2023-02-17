@@ -19,6 +19,9 @@ import rootCmp from './root-cmp.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
+// import 'vue-bootstrap-calendar/dist/bootstrap.min.css'
+// import VueBootstrapCalendar from 'vue-bootstrap-calendar'
+// import 'vue-bootstrap-calendar/dist/bootstrap.min.css'
 
 const app = createApp(rootCmp)
 app.use(router)
@@ -42,6 +45,6 @@ app.mount('#app')
 
 
 //  use FullCalendar
-app.use(FullCalendar, {
-    plugins: [dayGridPlugin, timeGridPlugin]
-})
+// app.use(FullCalendar, {
+//     plugins: [dayGridPlugin, timeGridPlugin]
+// })
