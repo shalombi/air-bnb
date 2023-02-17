@@ -26,6 +26,7 @@ import 'element-plus/dist/index.css'
 const app = createApp(rootCmp)
 app.use(router)
 app.use(store)
+// app.use(VCalendar);
 // app.use(ElementPlus)
 app.mount('#app')
 

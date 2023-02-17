@@ -252,15 +252,17 @@
                 <hr />
 
                 <!-- <section class="cal-container"> -->
-                    <!-- </section> -->
-                    
-                    <!-- <vue-cal :events="events"></vue-cal> -->
-                    <!-- <car-reserve/> -->
+                <!-- </section> -->
+
+                <vue-cal :events="events"></vue-cal>
+
+                <!-- <cal-reserve/> -->
             </section>
 
 
 
         </section>
+
 
         <section class="reserve-box">
             <div class="flex column">
@@ -339,24 +341,24 @@
 
 
                     <!-- ₪218 x 7 nights
-                                                                                                                                                            Show price breakdown
-                                                                                                                                                            ₪1,526
+                                                                                                                                                                    Show price breakdown
+                                                                                                                                                                    ₪1,526
 
-                                                                                                                                                            Weekly discount
-                                                                                                                                                            Show price breakdown
-                                                                                                                                                            -₪76
+                                                                                                                                                                    Weekly discount
+                                                                                                                                                                    Show price breakdown
+                                                                                                                                                                    -₪76
 
-                                                                                                                                                            Cleaning fee
-                                                                                                                                                            Show price breakdown
-                                                                                                                                                            ₪189 -->
+                                                                                                                                                                    Cleaning fee
+                                                                                                                                                                    Show price breakdown
+                                                                                                                                                                    ₪189 -->
 
                     <!-- <div class="flex justify-content">
-                                                                                                                                                                                                                                                <span>₪5,613 x 6 nights </span>
-                                                                                                                                                                                                                                                <span>₪33,680</span>
-                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                        <span>₪5,613 x 6 nights </span>
+                                                                                                                                                                                                                                                        <span>₪33,680</span>
+                                                                                                                                                                                                                                                    </div>
 
-                                                                                                                                                                                                                                            <div class="flex justify-content">
-                                                                                                                                                                                                                                                <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
+                                                                                                                                                                                                                                                    <div class="flex justify-content">
+                                                                                                                                                                                                                                                        <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
                     <!-- </div> -->
 
                 </div>
@@ -373,7 +375,8 @@
 
 <script>
 import VueCal from 'vue-cal'
-import carReserve from '../cmps/cal-reserve.vue'
+import calReserve from '../cmps/cal-reserve.vue'
+// import Datepicker from '@chenfengyuan/vue-datepicker';
 
 export default {
 
@@ -404,7 +407,7 @@ export default {
     },
     components: {
         VueCal,
-        carReserve,
+        calReserve,
     },
 }
 </script>
