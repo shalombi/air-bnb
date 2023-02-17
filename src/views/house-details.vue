@@ -95,6 +95,165 @@
                     </div>
                 </div>
             </section>
+
+            <hr />
+
+            <section class="flex column air-cover">
+                <div>
+                    <img src="../assets/imgs/details/aircover.webp" alt="">
+                </div>
+
+                <div>
+                    <span>Every booking includes free protection from Host cancellations, listing inaccuracies, and other
+                        issues like trouble checking in.
+                    </span>
+                </div>
+
+                <div class="container-learn-more">
+                    <span class="Learn-more">
+                        Learn more
+                    </span>
+                </div>
+
+            </section>
+
+            <hr />
+
+            <section class="desc-txt">
+                <span>A special seaview apartment in the heart of Coral Bay. Go to sleep with the sunset and wake up with
+                    the beautiful ocean waves. Walk to the nearby bars and restaurants, and take a stroll down to the rocky
+                    beach.</span>
+            </section>
+
+            <hr />
+
+
+
+            <section class="flex column where-sleep-container">
+                <div class="txt-container ">
+                    <span class="where-sleep-txt">Where you'll sleep</span>
+                </div>
+
+                <div class="bed-imgs grid">
+                    <img class="bed-img" src="../assets/imgs/img_house_example/8bc72225-3220-4b5d-af7e-d4c62a7c94b5.webp"
+                        alt="">
+                    <img class="bed-img" src="../assets/imgs/img_house_example/d3707a62-24bb-4a3f-a3d2-2e6812fa3194.webp"
+                        alt="">
+                </div>
+
+
+                <div class="desc flex column">
+                    <span>Bedroom area</span>
+                    <span>1 queen bed</span>
+                </div>
+
+            </section>
+
+            <hr />
+
+            <section class="all-services">
+                <div class="container-title">
+                    <span class="title">What this place offers</span>
+                </div>
+
+                <section class="grid all-services-grid">
+
+                    <section class="left-side-grid">
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/sea-view.svg" alt="">
+                                <div><span>Sea-view</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/kitchen.svg" alt="">
+                                <div><span>Kitchen</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/free parking-on-premises.svg"
+                                    alt="">
+                                <div><span>Free parking-on-premises</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src='../assets/imgs/details/services/55"-HDTV-with Netflix.svg'
+                                    alt="">
+                                <div><span>55"-HDTV-with Netflix</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/carbon-monoxide-alarm.svg"
+                                    alt="">
+                                <div><span>Carbon-monoxide-alarm</span> </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+                    <section class="left-side-grid">
+
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/public-or-shared .svg" alt="">
+                                <div><span>Public or shared beach access</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/wifi.svg" alt="">
+                                <div><span>Wifi</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/shared-pool.svg" alt="">
+                                <div><span>Shared-pool</span> </div>
+                            </div>
+                        </div>
+                        <!-- shared-pool -->
+                        <!-- smoke-alarm -->
+                        <div class="sol-service-container">
+                            <div class="sol-service flex">
+                                <img class="service-img" src="../assets/imgs/details/services/window-AC-unit.svg" alt="">
+                                <div><span>Window AC unit</span> </div>
+                            </div>
+                        </div>
+
+                        <div class="sol-service-container">
+                            <div class="sol-service smoke-alarm-container flex">
+                                <img class="service-img" src="../assets/imgs/details/services/smoke-alarm.svg" alt="">
+                                <div><span>Smoke alarm</span> </div>
+                            </div>
+                        </div>
+
+
+                    </section>
+
+                    
+                    
+                    
+                    
+                </section>
+
+                <hr/>
+            </section>
+
+
+
         </section>
 
         <section class="reserve-box">
@@ -152,7 +311,7 @@
                 </div>
 
                 <!-- margin-bottom: 12px; -->
-<!-- .details div span{margin-bottom: 12px;} -->
+                <!-- .details div span{margin-bottom: 12px;} -->
                 <div class="details">
                     <div class="info flex justify-content">
                         <span class="info-txt">₪5,613 x 6 nights </span>
@@ -174,24 +333,24 @@
 
 
                     <!-- ₪218 x 7 nights
-                    Show price breakdown
-                    ₪1,526
+                                                                                                                                                Show price breakdown
+                                                                                                                                                ₪1,526
 
-                    Weekly discount
-                    Show price breakdown
-                    -₪76
+                                                                                                                                                Weekly discount
+                                                                                                                                                Show price breakdown
+                                                                                                                                                -₪76
 
-                    Cleaning fee
-                    Show price breakdown
-                    ₪189 -->
+                                                                                                                                                Cleaning fee
+                                                                                                                                                Show price breakdown
+                                                                                                                                                ₪189 -->
 
                     <!-- <div class="flex justify-content">
-                                                                                                        <span>₪5,613 x 6 nights </span>
-                                                                                                        <span>₪33,680</span>
-                                                                                                    </div>
+                                                                                                                                                                                                                                    <span>₪5,613 x 6 nights </span>
+                                                                                                                                                                                                                                    <span>₪33,680</span>
+                                                                                                                                                                                                                                </div>
 
-                                                                                                    <div class="flex justify-content">
-                                                                                                        <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
+                                                                                                                                                                                                                                <div class="flex justify-content">
+                                                                                                                                                                                                                                    <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
                     <!-- </div> -->
 
                 </div>

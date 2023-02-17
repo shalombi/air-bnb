@@ -111,7 +111,7 @@
             // font-weight: lighter;
             font-size: 17px;
             font-weight: 100;
-            color: $clr8;
+            color: $clr10;
             // background-color: aqua;
         }
     }
@@ -170,6 +170,7 @@
     margin-top: 24%;
     margin-left: 8.32%;
     margin-right: 19%;
+    max-height: rem(430px);
 
 
     flex-direction: column;
@@ -309,6 +310,111 @@
     font-size: 12px;
     color: $clr8;
     // margin-bottom: 12px;
+}
+
+
+.air-cover {
+    img {
+        // margin-top: 10px;
+        max-width: rem(150px);
+    }
+
+    div {
+        margin-top: 14px;
+    }
+
+    .container-learn-more {
+        text-decoration: underline;
+        margin-bottom: 24px;
+    }
+}
+
+.desc-txt {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    span {
+        color: $clr8;
+    }
+}
+
+.where-sleep-container {
+    .bed-imgs {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    div {
+        .bed-img {
+            max-width: 100%;
+            border-radius: 14px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .txt-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .desc {
+        gap: 6px;
+        margin-top: 12px;
+        margin-bottom: 28px;
+
+    }
+
+
+
+}
+
+.sol-service-container {
+    margin-top: 18px;
+
+    div {
+
+        .title {
+            font-size: 22px;
+            font-weight: bolder;
+            // background-color: aqua;
+        }
+
+
+    }
+
+    .service-img {
+        max-width: 24px;
+        opacity: 0.5;
+    }
+
+    .sol-service {
+        gap: 12px;
+    }
+}
+
+
+.all-services {
+    .all-services-grid {
+        grid-template-columns: 1fr 1fr;
+
+        .left-side-grid {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+    }
+}
+
+.all-services {
+
+    .container-title,
+    .smoke-alarm-container {
+        margin-top: 22px;
+    }
+
+    // margin-bottom: 28px;
+
 }
 
 // .reviews-amount{
