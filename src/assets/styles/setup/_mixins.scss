@@ -63,3 +63,16 @@
   // .house-list {
 //     justify-items: center;
 // }
+
+@mixin navigation-btns {    
+    
+    align-items: center;
+    // border: 1px solid $clr5;
+    border-radius: 120px;
+    justify-content: space-between;
+    // grid-template-columns: 0.45fr 0.01fr 0.45fr 0.01fr 0.65fr;
+    justify-items: center;
+
+    // width: rem(355px);
+    // height: rem(49px);
+  }

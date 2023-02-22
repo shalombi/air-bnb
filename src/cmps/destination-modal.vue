@@ -1,27 +1,156 @@
-<template>
-    <div  id="app">
-        <button @click="showModal = true" class="button">Show Modal</button>
-        <transition name="fade" appear>
-            <div class="modal-overlay" v-if="showModal" @click="showModal = false"></div>
-        </transition>
-        <transition name="pop" appear>
-            <div class="modal" role="dialog" v-if="showModal">
-                <h1>Vue Transitions</h1>
-                <p>The <code>&lt;transition&gt;</code> component in Vue can create wonderful animated entrances and exits.
-                </p>
-                <button @click="showModal = false" class="button">Hide Modal</button>
+<template><!-- <section class="loggedin-user" v-if="loggedInUser">
+    <router-link :to="`/user/${loggedInUser._id}`">
+      {{ loggedInUser.fullname }}
+    </router-link>
+    <span>{{ loggedInUser.score.toLocaleString() }}</span>
+    <img :src="loggedInUser.imgUrl" />
+</section> -->
+    <header class="">
 
-            </div>
-        </transition>
-    </div>
+
+        <section class="head-container grid">
+
+            <section>
+
+
+                <section class="head-page">
+
+                    <div class="logo pointer">
+                        <router-link to="/house">
+                            <img src="../assets/logo.svg" alt="">
+                        </router-link>
+                    </div>
+                    <!-- border -->
+                    <div class="grid modal">
+                        <button class="btn-navigation-left stays-btn">
+                            <span>Stays</span>
+                        </button>
+
+                        <!-- <span>|</span> -->
+
+                        <button class="btn-navigation-mid">
+                            <span>Experiences</span>
+                        </button>
+
+                        <!-- <span>|</span> -->
+
+                        <button class="btn-navigation-mid">
+                            <span>Online Experiences</span>
+                        </button>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <section class="actions grid">
+
+                        <button class="pill left-action-btn hover-pill"> <span class="">Airbnb your home</span> </button>
+
+                        <button class="container--lang-img pill flex align-center justify-center">
+                            <img class="lang-img" src="../assets/imgs/svgs/lang.svg" alt="">
+                        </button>
+
+                        <div class="flex right-action-div pill border">
+
+                            <!-- <button class="burger-nav pill flex align-center"> -->
+                            <img class="burger-nav-img pill" src="../assets/imgs/svgs/nav.svg" alt="">
+                            <!-- </button> -->
+
+                            <button class="user-btn pill flex align-center justify-center">
+                                <img class="user pill" src="https://a0.muscache.com/defaults/user_pic-50x50.png?v=3">
+                            </button>
+
+                        </div>
+
+                    </section>
+                </section>
+            </section>
+
+            <section class="grid container-actions-nav">
+
+
+
+                <section class="grid actions-nav">
+
+                    <button class="btn-navigation-left">
+
+                        <div class="flex column">
+                            <div>
+                                <span>Ankywhere</span>
+                            </div>
+                            <div>
+                                <span>Ankywhere</span>
+                            </div>
+                        </div>
+
+                    </button>
+
+                    <span>|</span>
+
+                    <button class="btn-navigation-mid">
+                        <div class="flex column">
+                            <div>
+                                <span>Any week</span>
+                            </div>
+                            <div>
+                                <span>Any week</span>
+                            </div>
+                        </div>
+                        <!-- <span>Any week</span> -->
+                    </button>
+
+                    <span>|</span>
+
+                    <button class="btn-navigation-mid">
+                        <div class="flex column">
+                            <div>
+                                <span>Any week</span>
+                            </div>
+                            <div>
+                                <span>Any week</span>
+                            </div>
+                        </div>
+                        <!-- <span>Any week</span> -->
+                    </button>
+                    <span>|</span>
+
+                    <div class="flex div-right-navigation justify-content">
+                        <button class="btn-navigation-right">
+                            <span>Add guests</span>
+                        </button>
+
+                        <div class="search-container-icon">
+                            <img class="icon-search" src="../assets/imgs/svgs/icon-search.svg" alt="">
+                        </div>
+                    </div>
+
+
+
+                </section>
+            </section>
+
+
+        </section>
+
+
+    </header>
 </template>
+<!-- <logo-row /> -->
+
+
   
 <script>
+import logoRow from './logo-row.vue'
 
 export default {
     data() {
         return {
-            showModal: true
+
         }
     },
     methods: {
@@ -29,97 +158,11 @@ export default {
     },
     computed: {
 
+    },
+    components: {
+        logoRow
     }
 }
 </script>
-<!-- 
 
-<style>
-html {
-    height: 100%;
-    background: #FFF;
-    color: #000;
-    font-size: 62.5%;
-}
 
-body {
-    min-height: 100%;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    font-size: 1.4rem;
-}
-
-.button {
-    border: none;
-    color: #FFF;
-    background: #42b983;
-    appearance: none;
-    font: inherit;
-    font-size: 1.8rem;
-    padding: .5em 1em;
-    border-radius: .3em;
-    cursor: pointer;
-}
-
-.modal {
-    position: absolute;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
-    max-width: 22em;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-    background: #FFF;
-    z-index: 999;
-    transform: none;
-}
-
-.modal h1 {
-    margin: 0 0 1rem;
-}
-
-.modal-overlay {
-    content: '';
-    position: absolute;
-    /* position: fixed; */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 998;
-    background: #2c3e50;
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-/* ---------------------------------- */
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .4s linear;
-}
-
-.fade-enter,
-.fade-leave-to {
-    opacity: 0;
-}
-
-.pop-enter-active,
-.pop-leave-active {
-    transition: transform 0.5s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.5s linear;
-}
-
-.pop-enter,
-.pop-leave-to {
-    opacity: 0;
-    transform: scale(0.3) translateY(-50%);
-}
-</style>
-   -->

@@ -22,15 +22,23 @@ async function query(filterBy = { txt: '', price: 0 }) {
         const regex = new RegExp(filterBy.txt, 'i')
         houses = houses.filter(house => regex.test(house.type) || regex.test(house.description))
     }
-    
+
     if (filterBy.price) {
         houses = houses.filter(house => house.price <= filterBy.price)
     }
-    
+
     if (filterBy.sort) {
+
+        // if (filterBy.sort.filter(c => c === 'All').length){
+        //     const regex = new RegExp('All', 'i')
+        //     houses = houses.filter(house => regex.test(house.type) )
+        // }
+        
         const regex = new RegExp(filterBy.sort, 'i')
         houses = houses.filter(house => regex.test(house.type) || regex.test(house.description))
     }
+
+
 
     return houses
 }
@@ -93,7 +101,7 @@ async function testData() {
 
     await storageService.post(STORAGE_KEY, {
         name: 'Panoramic View Villa in OliveGroves',
-        type:'Farm',
+        type: 'Farm',
         price: 180, kmDistance: 3318,
         dateFree: 'Mar 19 - 24',
         imgs: {
@@ -114,7 +122,7 @@ async function testData() {
 
     await storageService.post(STORAGE_KEY, {
         name: 'Sea view villa with Private pool Near the beach 3',
-        type:'Amazing pools',
+        type: 'Amazing pools',
         price: 514, kmDistance: 1057,
         dateFree: 'Mar 19 - 24',
         imgs: {
@@ -134,7 +142,7 @@ async function testData() {
 
     await storageService.post(STORAGE_KEY, {
         name: 'Villa Merina Heated Pool',
-        type:'Farm',
+        type: 'Farm',
         price: 514, kmDistance: 1057,
         dateFree: 'Mar 19 - 24',
         imgs: {

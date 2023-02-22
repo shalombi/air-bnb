@@ -1,20 +1,18 @@
 <template><!-- < destination-modal /> -->
 
-  <header>
+  <header v-if="!showDestinationModal" >
 
-    <logo-row />
+    <logo-row @click="displayDestinationModal"/>
     <!-- todo: hide this (<sort-by/>) cmp when go to details cmp -->
     <sort-by @setFilter="setFilter" v-if="this.$store.getters.displaySortBy" />
     <!-- {{ this.$store.getters.displaySortBy }} 12222 -->
 
   </header>
 
-<!-- < destination-modal /> --></template>
+<destination-modal v-if="showDestinationModal" @click="displayDestinationModal"/>
+
+</template>
 <script>
-
-
-
-
 
 
 
@@ -27,6 +25,7 @@ import destinationModal from './destination-modal.vue'
 export default {
   data() {
     return {
+      showDestinationModal:false
       // displaySortBy: false
       // imgsUrls:[]
       // langUrl: "../assets/imgs/svgs/lang.svg"
@@ -38,6 +37,9 @@ export default {
       this.$store.dispatch({ type: 'setFilter', filterBy })
       // this.$store.dispatch({ type: 'loadToys' })
     },
+    displayDestinationModal(){
+      this.showDestinationModal = !this.showDestinationModal
+    }
     // setFilter(filterBy) {
     //   this.$store.dispatch({ type: 'filterBy', setSortBy })
 

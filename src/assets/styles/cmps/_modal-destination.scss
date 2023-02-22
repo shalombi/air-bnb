@@ -1,0 +1,57 @@
+.modal {
+    @include navigation-btns;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 27.1875rem;
+    border: none;
+
+    .stays-btn {
+        margin-left: 90px;
+    }
+
+    button {
+        color: black;
+        font-size: rem(15px);
+        background-color: $clr6 ;
+    }
+}
+
+.container-actions-nav{
+    justify-items: center;
+}
+.actions-nav{
+    @include navigation-btns;
+    grid-template-columns: 0.6fr 0.1fr 0.3fr 0.1fr 0.3fr  0.1fr 0.5fr;
+    justify-items: center;
+    width: 60.1875rem;
+    height: 4.4625rem;
+    margin-bottom: 18px;
+    button span{
+        color: black;
+    }
+
+    border: 1px solid $clr5;
+
+    // .icon-search {
+    //     max-width: 12px;
+    // }
+
+    // margin-left: 500px;
+    // @include navigation-btns;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // width: 27.1875rem;
+
+
+//    button{
+//     // padding: 20px;
+//     margin: 20px;
+//    }
+}
+
+
+
+
+
+
+
+// .btn-navigation-mid {
+// }
