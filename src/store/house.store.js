@@ -30,7 +30,12 @@ export function getActionAddHouseMsg(houseId) {
 export const houseStore = {
     state: {
         displaySortBy: true,
-        houses: []
+        houses: [],
+        filterBy: {
+            label: 'All',
+            sort: 'name',
+            inStock: true,
+          },
     },
     getters: {
         houses({ houses }) { return houses },
@@ -59,6 +64,11 @@ export const houseStore = {
             if (!house.msgs) house.msgs = []
             house.msgs.push(msg)
         },
+        setFilter(state, { filterBy }) {
+            state.filterBy = filterBy
+          },
+
+        // setSortBy
     },
     actions: {
         async addHouse(context, { house }) {
@@ -83,13 +93,20 @@ export const houseStore = {
         },
         async loadHouses(context) {
             try {
-                const houses = await houseService.query()
+                console.log('context.state.filterBy',context.state.filterBy)
+                const houses = await houseService.query(context.state.filterBy)
                 context.commit({ type: 'setHouses', houses })
             } catch (err) {
                 console.log('houseStore: Error in loadHouses', err)
                 throw err
             }
         },
+        // loadToys({ commit, state }) {
+        //     toyService.query(state.filterBy)
+        //       .then((toys) => {
+        //         commit({ type: 'setToys', toys })
+        //       })
+        //   },
         async removeHouse(context, { houseId }) {
             try {
                 await houseService.remove(houseId)
@@ -108,6 +125,16 @@ export const houseStore = {
                 throw err
             }
         },
+        async setFilter({ commit, dispatch }, { filterBy }) {
+            try{
+                commit({ type: 'setFilter', filterBy })
+                dispatch({ type: 'loadHouses' })
+            }
+            catch (err) {
+                console.log('houseStore: Error in addHouseMsg', err)
+                throw err
+            }
+          }
 
     }
 }

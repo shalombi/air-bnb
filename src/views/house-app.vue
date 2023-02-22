@@ -7,6 +7,7 @@
       
       
       <div class="house flex column" v-for="house in houses" :key="house._id">
+
         <router-link class="router-link-cls" :to="'/house/' + house._id">
         <house-preview  :house="house"/>
         </router-link> 

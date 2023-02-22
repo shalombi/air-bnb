@@ -236,7 +236,9 @@ header {
     }
 
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 
 .con {
     overflow-x: scroll;
@@ -245,6 +247,7 @@ header {
 
     height: 100px;
     overflow-x: scroll;
+    // scrollbar-width: none; 
 }
 
 .scroll-btn-left,

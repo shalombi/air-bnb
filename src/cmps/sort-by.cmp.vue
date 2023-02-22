@@ -1,10 +1,12 @@
-<template>
-
-  <!-- <button class="scroll-btn-left" @click="scrollLeft">Left</button> -->
+<template><!-- <button class="scroll-btn-left" @click="scrollLeft">Left</button> -->
   <section class="sort flex con">
 
+    <div class="el-sorting first" @click="setFilter('Farm')">
+      <img src="../assets/imgs/main-bar-imgs/Farms.jpeg" alt="">
+      <span class="el-label-sorting">Farm</span>
+    </div>
 
-    <div class="el-sorting first">
+    <div class="el-sorting first" @click="setFilter('Amazing pools')">
       <img src="../assets/imgs/main-bar-imgs/Amazing pools.jpeg" alt="">
       <span class="el-label-sorting">Amazing pools</span>
     </div>
@@ -107,21 +109,21 @@
     </div>
 
     <!--
-    <div class="el-sorting">
-      <img src="../assets/imgs/main-bar-imgs/Boats.jpeg" alt="">
-      <span class="el-label-sorting">Boats</span>
-    </div>
+      <div class="el-sorting">
+        <img src="../assets/imgs/main-bar-imgs/Boats.jpeg" alt="">
+        <span class="el-label-sorting">Boats</span>
+      </div>
 
-    <div class="el-sorting">
-      <img src="../assets/imgs/main-bar-imgs/Amazing views.jpeg" alt="">
-      <span class="el-label-sorting">Amazing views</span>
-    </div>
+      <div class="el-sorting">
+        <img src="../assets/imgs/main-bar-imgs/Amazing views.jpeg" alt="">
+        <span class="el-label-sorting">Amazing views</span>
+      </div>
 
 
-    <div class="el-sorting">
-      <img src="../assets/imgs/main-bar-imgs/Ski-in:out.jpeg" alt="">
-      <span class="el-label-sorting">Ski-in:out</span>
-    </div> -->
+      <div class="el-sorting">
+        <img src="../assets/imgs/main-bar-imgs/Ski-in:out.jpeg" alt="">
+        <span class="el-label-sorting">Ski-in:out</span>
+      </div> -->
 
 
     <!-- <button class="scroll-btn-right" @click="scrollRight">Right</button> -->
@@ -130,7 +132,6 @@
       <span class="el-label-sorting">filter</span>
     </button>
   </section>
-
 </template>
 
 <script>
@@ -156,10 +157,22 @@ export default {
           reviewCount: 10,
           isSuperhost: true
         }
-      ]
+      ],
+      filterBy: {
+        name: '',
+        label: 'All',
+        sort: 'name',
+        inStock: false,
+      },
+      // sortBy: null
     };
   },
   methods: {
+    setFilter(filterBy) {
+      this.filterBy.sort = filterBy
+      console.log('setFilter',this.filterBy);
+      this.$emit('setFilter', { ...this.filterBy })
+    },
     scrollLeft() {
       this.$el.scrollLeft -= 200;
     },

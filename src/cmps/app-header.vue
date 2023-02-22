@@ -1,13 +1,15 @@
-<template>
+<template><!-- < destination-modal /> -->
+
   <header>
 
     <logo-row />
     <!-- todo: hide this (<sort-by/>) cmp when go to details cmp -->
-    <sort-by v-if="this.$store.getters.displaySortBy" />
+    <sort-by @setFilter="setFilter" v-if="this.$store.getters.displaySortBy" />
     <!-- {{ this.$store.getters.displaySortBy }} 12222 -->
 
-</header>
-</template>
+  </header>
+
+<!-- < destination-modal /> --></template>
 <script>
 
 
@@ -20,6 +22,8 @@ name: "app-header"
 import sortBy from './sort-by.cmp.vue'
 import logoRow from './logo-row.vue'
 
+import destinationModal from './destination-modal.vue'
+
 export default {
   data() {
     return {
@@ -27,6 +31,17 @@ export default {
       // imgsUrls:[]
       // langUrl: "../assets/imgs/svgs/lang.svg"
     }
+  },
+  methods: {
+    setFilter(filterBy) {
+      console.log('filterBy', filterBy);
+      this.$store.dispatch({ type: 'setFilter', filterBy })
+      // this.$store.dispatch({ type: 'loadToys' })
+    },
+    // setFilter(filterBy) {
+    //   this.$store.dispatch({ type: 'filterBy', setSortBy })
+
+    // },
   },
   created() {
     // this.displaySortBy = this.$store.getters.displaySortBy
@@ -42,6 +57,7 @@ export default {
   components: {
     sortBy,
     logoRow,
+    destinationModal,
   }
 
 }
