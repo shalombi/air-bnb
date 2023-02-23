@@ -77,25 +77,27 @@
 
                 <section class="grid actions-nav">
 
-                    <button class="btn-navigation-left">
-
+                    <button class="btn-navigation-left" @click.stop="displaySection('A')">
                         <div class="flex column">
                             <div>
-                                <span>Ankywhere</span>
+                                <span>A</span>
                             </div>
                             <div>
                                 <span>Ankywhere</span>
                             </div>
                         </div>
 
+                        <span class="">is span</span>
                     </button>
+
+
 
                     <span>|</span>
 
-                    <button class="btn-navigation-mid">
+                    <button class="btn-navigation-mid" @click.stop="displaySection('B')">
                         <div class="flex column">
                             <div>
-                                <span>Any week</span>
+                                <span>B</span>
                             </div>
                             <div>
                                 <span>Any week</span>
@@ -106,10 +108,10 @@
 
                     <span>|</span>
 
-                    <button class="btn-navigation-mid">
+                    <button class="btn-navigation-mid" @click.stop="displaySection('C')">
                         <div class="flex column">
                             <div>
-                                <span>Any week</span>
+                                <span>C</span>
                             </div>
                             <div>
                                 <span>Any week</span>
@@ -119,9 +121,9 @@
                     </button>
                     <span>|</span>
 
-                    <div class="flex div-right-navigation justify-content">
-                        <button class="btn-navigation-right">
-                            <span>Add guests</span>
+                    <div class="flex div-right-navigation justify-content" @click.stop="displaySection('D')">
+                        <button class="btn-navigation-right" >
+                            <span>D</span>
                         </button>
 
                         <div class="search-container-icon">
@@ -150,14 +152,82 @@ import logoRow from './logo-row.vue'
 export default {
     data() {
         return {
+            // display: {
+            //     A: false,
+            //     B: false,
+            //     C: false,
+            //     D: false,
+            // },
+
+
+            display: [
+                { A: false, },
+
+                { B: false },
+                { C: false },
+                { D: false },
+            ]
+
+
+
+            // displayA: false,
+            // displayB: false,
+            // displayC: false,
+            // displayD: false,
+            // sectionShowed
 
         }
     },
     methods: {
+        displaySection(section, sectionToHide = ['A', 'B', 'C', 'D']) {
+            console.log('section', section);
+            // const displaySection = this.display.filter(d => d[section])[0] || this.display.filter(d => d[section])[0] === section 
+            // console.log('d[section])[0]',displaySection);
+
+            // console.log(displaySection, 'displaySection')
+            // console.log(displaySection[section], 'displaySection[section]')
+
+            // Rest display
+            // const ABCD = ['A','B','C','D']
+            this.display.forEach(d => {
+                // console.log(d, 'd')
+
+                sectionToHide.forEach(sectionChar => {
+                    // console.log('sectionChar', sectionChar)
+                    d[sectionChar] = false
+                    // console.log(d)
+                    // d[sectionChar] = false
+
+                    // console.log(d[sectionChar], section);
+                })
+                // console.log('d',d);
+                // console.log('d.section',d[section]);
+                // console.log('section',section)
+                // if (d[section] === section) console.log('popo');
+
+            })
+            // displaySection[section] = true
+            // console.log(this.display[0], 'this.display')
+            // 
+
+            // const displaySection = this.display.forEach(d => if (d[section] === section)console.log('find'))
+            // const display_ = this.display.find(d => console.log(d) )
+            // console.log('d[section]',display_)
+
+            // console.log('d.section',d[section]);
+            this.display[0][section] = true
+            console.log(this.display[0])
+
+
+
+        }
 
     },
     computed: {
-
+        displayToShow() {
+            // console.log(this.display.filter(d => d.A)[0])
+            return this.display.filter(d => d.A)[0]
+        }
     },
     components: {
         logoRow
