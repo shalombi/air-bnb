@@ -11,8 +11,6 @@
         <section class="head-container grid">
 
             <section>
-
-
                 <section class="head-page">
 
                     <div class="logo pointer">
@@ -40,12 +38,6 @@
 
 
                     </div>
-
-
-
-
-
-
 
                     <section class="actions grid">
 
@@ -90,8 +82,6 @@
                         <span v-if="displayToShow('A')" class="">is span</span>
                     </button>
 
-
-
                     <span>|</span>
 
                     <button class="btn-navigation-mid" @click.stop="displaySection('B')">
@@ -104,6 +94,7 @@
                             </div>
                         </div>
                         <!-- <span>Any week</span> -->
+                        <span v-if="displayToShow('B')" class="">is span</span>
                     </button>
 
                     <span>|</span>
@@ -118,12 +109,14 @@
                             </div>
                         </div>
                         <!-- <span>Any week</span> -->
+                        <span v-if="displayToShow('C')" class="">is span</span>
                     </button>
                     <span>|</span>
 
                     <div class="flex div-right-navigation justify-content" @click.stop="displaySection('D')">
                         <button class="btn-navigation-right">
                             <span>D</span>
+                        <span v-if="displayToShow('D')" class="">is span</span>
                         </button>
 
                         <div class="search-container-icon">
@@ -142,9 +135,6 @@
 
     </header>
 </template>
-<!-- <logo-row /> -->
-
-
   
 <script>
 import logoRow from './logo-row.vue'
@@ -152,61 +142,32 @@ import logoRow from './logo-row.vue'
 export default {
     data() {
         return {
-            // display: {
-            //     A: false,
-            //     B: false,
-            //     C: false,
-            //     D: false,
-            // },
-
-
             display: [
                 { A: false, },
-
                 { B: false },
                 { C: false },
                 { D: false },
             ]
-
-
-
-            // displayA: false,
-            // displayB: false,
-            // displayC: false,
-            // displayD: false,
-            // sectionShowed
-
         }
     },
     methods: {
         displaySection(section, sectionToHide = ['A', 'B', 'C', 'D']) {
-            console.log('section', section);
+            // console.log('section', section);
             this.display.forEach(d => {
                 sectionToHide.forEach(sectionChar => {
                     d[sectionChar] = false
                 })
             })
             this.display[0][section] = true
-            console.log(this.display[0])
-
-            // this.displayToShow(section)
+            // console.log(this.display[0])
         },
         displayToShow(section) {
-            console.log('section', section);
-            console.log(this.display[0][section],'d[section]')
-            // console.log(this.display.filter(d => d.A)[0])
-            // const d = this.display.filter(d => d[section])[0]
-            // console.log(d);
             return this.display[0][section]
         }
     },
 
 
     computed: {
-        // displayToShow() {
-        //     // console.log(this.display.filter(d => d.A)[0])
-        //     return this.display.filter(d => d.A)[0]
-        // }
     },
     components: {
         logoRow

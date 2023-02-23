@@ -1,10 +1,9 @@
 
 
-<template>
-<!-- {{ house }} -->
-<!-- <div class="bg-litepie-primary-500 text-white p-4">
-    Hello, world!
-</div> -->
+<template><!-- {{ house }} -->
+    <!-- <div class="bg-litepie-primary-500 text-white p-4">
+        Hello, world!
+    </div> -->
     <section class="container" v-if="house">
         <h1 class="title">{{ house.name }}</h1>
         <section class="flex justify-content">
@@ -45,21 +44,16 @@
         <!-- <pre>{{house}}</pre> -->
         <div class="grid grid-imgs">
             <div class="left-side-grid">
-                <img class="hero-grid-left"
-                    :src="house?.imgs?.heroImgUrl" alt="">
+                <img class="hero-grid-left" :src="house?.imgs?.heroImgUrl" alt="">
             </div>
             <!-- ../assets/imgs/ -->
             <div class="grid right-side-grid">
                 <!-- <img class="left-top" :src="house.imgs.restImgsUrl.imgUrl1"
-                    alt=""> -->
-                    <img class="left-top" :src="house.imgs.restImgsUrl.imgUrl1"
-                    alt="">
-                <img class="right-top" :src="house.imgs.restImgsUrl.imgUrl2"
-                    alt="">
-                <img class="left-bottom"
-                    :src="house.imgs.restImgsUrl.imgUrl3" alt="">
-                <img class="right-bottom"
-                    :src="house.imgs.restImgsUrl.imgUrl4" alt="">
+                        alt=""> -->
+                <img class="left-top" :src="house.imgs.restImgsUrl.imgUrl1" alt="">
+                <img class="right-top" :src="house.imgs.restImgsUrl.imgUrl2" alt="">
+                <img class="left-bottom" :src="house.imgs.restImgsUrl.imgUrl3" alt="">
+                <img class="right-bottom" :src="house.imgs.restImgsUrl.imgUrl4" alt="">
             </div>
         </div>
     </section>
@@ -142,17 +136,17 @@
                 </div>
 
                 <!-- <div class="bed-imgs grid">
-                    <div>
+                        <div>
 
-                        <img class="bed-img"
-                        :src="house.imgs.sleep[0].imgUrlSleep1" alt="">
-                    </div>
-                    <div>
+                            <img class="bed-img"
+                            :src="house.imgs.sleep[0].imgUrlSleep1" alt="">
+                        </div>
+                        <div>
 
-                        <img class="bed-img"
-                        :src="house.imgs.sleep[1].imgUrlSleep2" alt="">
-                    </div>
-                </div> -->
+                            <img class="bed-img"
+                            :src="house.imgs.sleep[1].imgUrlSleep2" alt="">
+                        </div>
+                    </div> -->
 
 
                 <div class="desc flex column">
@@ -355,50 +349,68 @@
 
 
                     <!-- ₪218 x 7 nights
-                                                                                                                                                                              Show price breakdown
-                                                                                                                                                                              ₪1,526
+                                                                                                                                                                                  Show price breakdown
+                                                                                                                                                                                  ₪1,526
 
-                                                                                                                                                                              Weekly discount
-                                                                                                                                                                              Show price breakdown
-                                                                                                                                                                              -₪76
+                                                                                                                                                                                  Weekly discount
+                                                                                                                                                                                  Show price breakdown
+                                                                                                                                                                                  -₪76
 
-                                                                                                                                                                              Cleaning fee
-                                                                                                                                                                              Show price breakdown
-                                                                                                                                                                              ₪189 -->
+                                                                                                                                                                                  Cleaning fee
+                                                                                                                                                                                  Show price breakdown
+                                                                                                                                                                                  ₪189 -->
 
                     <!-- <div class="flex justify-content">
-                                                                                                                                                                                                                                                                  <span>₪5,613 x 6 nights </span>
-                                                                                                                                                                                                                                                                  <span>₪33,680</span>
-                                                                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                                                                                      <span>₪5,613 x 6 nights </span>
+                                                                                                                                                                                                                                                                      <span>₪33,680</span>
+                                                                                                                                                                                                                                                                  </div>
 
-                                                                                                                                                                                                                                                              <div class="flex justify-content">
-                                                                                                                                                                                                                                                                  <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
+                                                                                                                                                                                                                                                                  <div class="flex justify-content">
+                                                                                                                                                                                                                                                                      <span>₪5,613 x 6 nights </span>                                           <span>₪33,680</span> -->
                     <!-- </div> -->
 
                 </div>
 
 
             </div>
+
         </section>
+        
+        <!-- <section class="reviews">i am review </section> -->
 
-
-
+        
+        
+        
     </section>
+    
+    <section class="map-container">
+       <map-cmp />
+   </section>
+
+    <!-- <section class="map-container flex center"> -->
+        <!-- <section class="map grid">
+            <section></section>
+            <map-cmp />
+            <section></section>
+        </section> -->
+    <!-- </section> -->
+
 </template>
 
 
 <script>
-import { houseService }  from"../services/house.service.local.js"
+import mapCmp from "../cmps/map-cmp.vue";
+
+import { houseService } from "../services/house.service.local.js"
 // import VueCal from 'vue-cal'
 // import calReserve from '../cmps/cal-reserve.vue'
 // import Datepicker from '@chenfengyuan/vue-datepicker';
 // import datePicker from '../cmps/date-picker.vue'
 
 export default {
-
     data() {
         return {
-            house:null,
+            house: null,
             displaySortBy: null,
 
         }
@@ -417,7 +429,13 @@ export default {
     },
     components: {
         // datePicker,
+        mapCmp
     },
 }
 </script>
 
+<!-- <style>
+.map{
+    max-width: 300px;
+}
+</style> -->
